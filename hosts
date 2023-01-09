@@ -1,0 +1,11 @@
+[myserver]
+172.31.3.179
+
+[myserver:vars]
+ansible_ssh_private_key_file="../jenkins-slave1.pem"
+
+[myserver1]
+172.31.12.127
+
+[myserver1:vars]
+ansible_ssh_private_key_file="../jenkins-slave.pem"
