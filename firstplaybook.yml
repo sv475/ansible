@@ -1,9 +1,14 @@
 ---
-- hosts: myserver
+- hosts: myserver1
   become: yes
   
   tasks:
-    -name: Ensure Apache2 is installed 
-     apt:
-        name: Apache2
+    - name: Ensure Apache2 is installed 
+      yum:
+        name: httpd
         state: latest
+
+    - name: Ensure httpd service is running
+      service:
+         name: httpd
+         state: started 
