@@ -9,3 +9,7 @@ ansible_ssh_private_key_file="../jenkins-slave1.pem"
 
 [myserver1:vars]
 ansible_ssh_private_key_file="../jenkins-slave.pem"
+
+[webstack:children]
+myserver
+myserver1
