@@ -1,0 +1,19 @@
+
+To Stop / Start the httpd service
+
+ansible myserver1 -i hosts --become -m service  -a "name=httpd state=started"
+
+ansible myserver1 -i hosts --become -m service  -a "name=httpd state=stopped"
+
+
+To install httpd  via yum
+
+ansible myserver1 -i hosts --become -m yum  -a "name=httpd state=present"
+
+To verify the httpd service
+
+ansible myserver1 -i hosts --become -m command  -a "which httpd"
+
+To Uninstall httpd via yum
+
+ansible myserver1 -i hosts --become -m yum  -a "name=httpd state=absent"
