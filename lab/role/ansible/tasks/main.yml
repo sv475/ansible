@@ -1,2 +1,1 @@
----
-# tasks file for role/ansible
+- include_tasks: apache2_run.yml

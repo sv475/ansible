@@ -1,4 +1,0 @@
-- name: restart_kar
-  service:
-    name: httpd
-    state: restarted  

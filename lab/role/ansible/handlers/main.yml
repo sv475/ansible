@@ -1,2 +1,4 @@
----
-# handlers file for role/ansible
+- name: restart_kar
+  service:
+    name: httpd
+    state: restarted  
