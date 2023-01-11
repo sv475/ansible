@@ -1,0 +1,4 @@
+---
+# tasks file for role/apache2
+
+- import_tasks: apache2_run.yml
