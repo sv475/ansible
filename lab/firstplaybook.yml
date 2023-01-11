@@ -2,5 +2,8 @@
 - hosts: webstack
   become: yes
   
-  roles:
-    - ansible
+  tasks:
+    - include_tasks: tasks/apache2_run.yml
+             
+  handlers:
+    - import_tasks: handlers/main.yml
