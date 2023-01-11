@@ -1,0 +1,17 @@
+
+  - name: Ensure Apache2 is installed 
+    yum:
+      name: httpd
+      state: latest
+
+  - name: Ensure httpd service is running
+    service:
+       name: httpd
+       state: started 
+  
+  - name: Copy the new Index file
+    template:
+       src: /home/ec2-user/ansible/lab/template/index.html.j2
+       dest: /var/www/html/index.html
+    notify:
+      - restart_kar
