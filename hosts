@@ -1,8 +1,8 @@
-[myserver]
-172.31.3.179
+[ansible_test]
+172.31.32.87
 
-[myserver:vars]
-ansible_ssh_private_key_file="../jenkins-slave1.pem"
+[ansible_test:vars]
+ansible_ssh_private_key_file="../ansible_test.pem"
 
 [myserver1]
 172.31.12.127
@@ -11,5 +11,5 @@ ansible_ssh_private_key_file="../jenkins-slave1.pem"
 ansible_ssh_private_key_file="../jenkins-slave.pem"
 
 [webstack:children]
-myserver
+ansible_test
 myserver1

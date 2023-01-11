@@ -15,9 +15,10 @@
     
     - name: Copy the new Index file
       template:
-         src: template/index.html
+         src: /home/ec2-user/ansible/lab/template/index.html.j2
          dest: /var/www/html/index.html
-         notify: restart_kar
+      notify:
+        - restart_kar
              
   handlers:
     - name: restart_kar
