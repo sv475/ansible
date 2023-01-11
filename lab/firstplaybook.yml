@@ -15,11 +15,12 @@
     
     - name: Copy the new Index file
       template:
-        src: template/index.html
-        dest: /var/www/html/index.html
-        notify: restart_kar
+         src: template/index.html
+         dest: /var/www/html/index.html
+         notify: restart_kar
              
-  handler:
+  handlers:
     - name: restart_kar
-      service: httpd
-      state: restarted      
+      service:
+         name: httpd
+         state: restarted      
