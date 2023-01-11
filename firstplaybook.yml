@@ -1,5 +1,5 @@
 ---
-- hosts: myserver1
+- hosts: webstack
   become: yes
   
   tasks:
