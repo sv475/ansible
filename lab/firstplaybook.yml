@@ -4,3 +4,11 @@
   
   roles:
     - apache2
+  tags: web
+ 
+- hosts: proxy_test
+  become: yes
+
+  roles:
+    - nginx 
+  tags: proxy

@@ -13,3 +13,9 @@ ansible_ssh_private_key_file="../jenkins-slave.pem"
 [webstack:children]
 ansible_test
 myserver1
+
+[proxy_test]
+172.31.15.73
+
+[proxy_test:vars]
+ansible_ssh_private_key_file="../proxy_test.pem"

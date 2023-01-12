@@ -1,0 +1,4 @@
+- name: "Deploy Nginx sites configuration"
+  template: src=mysite.conf.j2 dest="/etc/nginx/conf.d/mysite.conf"
+  notify: Restart nginx
+ 

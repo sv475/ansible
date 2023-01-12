@@ -1,0 +1,10 @@
+
+- name: "Install nginx on the server"
+  yum:
+   name: nginx
+   state: present
+
+- name: "Should be up and running"
+  service:
+    name: nginx
+    state: started
