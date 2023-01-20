@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  become: yes
+ 
+  tasks:
+    - name: "To get package facts"
+      package_facts:
+        manager: auto
+## Condition 'when' will check 'httpd' package  in ansible_facts.packages data array
+
+    - name: "To uninstall  httpd if it is installed"
+      yum:
+        name: httpd
+        state: absent
+      when: "'httpd' in ansible_facts.packages"
+
+    - name: "To install httpd if it is not installed"
+      yum:
+        name: httpd
+        state: latest
+      when: "'httpd' not in ansible_facts.packages"
