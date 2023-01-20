@@ -1,6 +1,6 @@
-ansible consists of ansible.congf file and a hosts file
+Ansible consists of ansible.confg file , playbook and a hosts file
 
-hosts file contains the list of server to  be connected. It includes all the other imp  var alos.
+hosts file contains the list of server to  be connected. It includes all other important defined variables also.
 
 
 [server]
