@@ -11,7 +11,7 @@
   
   - name: Copy the new Index file
     template:
-       src: templates/index.html.j2
+       src: templates/index.j2
        dest: /var/www/html/index.html
     notify:
       - restart_kar
